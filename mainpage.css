@@ -56,6 +56,8 @@ nav {
 	font-size: large;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	
 }
 
@@ -71,6 +73,8 @@ nav a{
 	font-weight: bold;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	
 }
 
