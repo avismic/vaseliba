@@ -51,6 +51,7 @@ body{
 nav {
 	background-colour:#c9b979;
 	overflow: hidden;
+	padding: 40px;
 	text-align: center;
 	font-weight: bold;
 	font-size: large;
