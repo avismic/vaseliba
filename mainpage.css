@@ -48,6 +48,19 @@ body{
   text-align: center;
 }
 
+nav {
+	background-colour:#c9b979;
+	overflow: hidden;
+}
+
+nav a{
+	text-decoration: none;
+	padding:20px;
+	text-align: center;
+	float: inline-start;
+	color: black;
+}
+
 .scale {
   background-color: #eedfe8;
   font-size: 60%;
