@@ -51,6 +51,7 @@ body{
 nav {
 	background-colour:#c9b979;
 	overflow: hidden;
+	text-align: center;
 }
 
 nav a{
@@ -59,6 +60,8 @@ nav a{
 	text-align: center;
 	float: inline-start;
 	color: black;
+	margin-right: 20px;
+	
 }
 
 .scale {
