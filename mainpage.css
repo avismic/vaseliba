@@ -52,6 +52,8 @@ nav {
 	background-colour:#c9b979;
 	overflow: hidden;
 	text-align: center;
+	font-weight: bold;
+	font-size: large;
 }
 
 nav a{
