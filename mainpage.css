@@ -51,7 +51,7 @@ body{
 nav {
 	background-colour:#c9b979;
 	overflow: hidden;
-	padding: 40px;
+	padding: 20px;
 	text-align: center;
 	font-weight: bold;
 	font-size: large;
@@ -64,7 +64,7 @@ nav {
 
 nav a{
 	text-decoration: none;
-	padding:40px;
+	padding:20px;
 	text-align: center;
 	float: inline-start;
 	color: black;
@@ -76,8 +76,14 @@ nav a{
 	margin-bottom: 20px;
 	padding-top: 20px;
 	padding-bottom: 20px;
+	transition:  0.5s;
 	
 }
+
+nav a:hover {
+	font-weight: bolder;
+}
+
 
 .scale {
   background-color: #eedfe8;
