@@ -60,7 +60,10 @@ nav a{
 	text-align: center;
 	float: inline-start;
 	color: black;
-	margin-right: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: large;
+	font-weight: bold;
 	
 }
 
