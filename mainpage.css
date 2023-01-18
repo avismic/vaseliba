@@ -75,6 +75,7 @@ nav ul {
   display: flex;
   text-align: center;
   font-size: large;
+	background-color:#c9b979;
 }
 
 #listofservices {
@@ -85,6 +86,7 @@ nav ul {
 nav li {
   margin-right: 1em;
   text-align: center;
+	background-color: #c9b979;
 }
 
 nav a {
