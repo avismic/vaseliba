@@ -96,6 +96,11 @@ nav a:hover {
   text-align: center;
 }
 
+.mouse img {
+	height:50px;
+	width:50px;
+}
+
 .congrats {
   margin: 50px;
 }
