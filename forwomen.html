@@ -98,15 +98,72 @@
         </div>
   <center>
 
-  <script>
-    function calculateEndDate() {
- var periodStartDate = new Date(document.getElementById("period-start-date").value);
- var endDate = new Date(periodStartDate);
- endDate.setDate(endDate.getDate() + 39);
- //formatting the date
- var endDateFormatted = endDate.toISOString().slice(0,10);
- document.getElementById("end-date").innerHTML = endDateFormatted;
-}
+ <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('.period-form form');
+    form.addEventListener('submit', event => {
+      event.preventDefault(); // Prevent the default form submission
+      calculatePredictedDate();
+    });
+  });
+
+  function calculatePredictedDate() {
+    // Retrieve the period start date
+    const startDateValue = document.getElementById("period-start-date").value;
+    if (!startDateValue) {
+      alert("Please enter a valid start date.");
+      return;
+    }
+    const periodStart = new Date(startDateValue);
+
+    // Optionally, retrieve the period end date (if you want to use period duration)
+    const endDateValue = document.getElementById("date2").value;
+    let periodDuration = 0;
+    if (endDateValue) {
+      const periodEnd = new Date(endDateValue);
+      periodDuration = Math.round((periodEnd - periodStart) / (1000 * 60 * 60 * 24));
+      // You can use periodDuration as part of your calculation if needed.
+    }
+
+    // Baseline cycle length (in days); you might let this be a default or user input
+    const standardCycleLength = 28;
+
+    // Get the adjustment based on whether the last period was early or late
+    const timing = document.getElementById("latearly").value;
+    let adjustment = 0;
+    switch(timing) {
+      case "very_early":
+        adjustment = -3;
+        break;
+      case "early":
+        adjustment = -2;
+        break;
+      case "ontime":
+        adjustment = 0;
+        break;
+      case "late":
+        adjustment = 2;
+        break;
+      case "very_late":
+        adjustment = 3;
+        break;
+      default:
+        adjustment = 0;
+    }
+
+    // Optionally, you could incorporate the average menstrual duration from the dropdown
+    // For example, if you expect longer periods to be associated with longer cycles,
+    // you might add some function of that value. For now, we'll leave it out.
+
+    // Calculate the predicted next period start date
+    const predictedCycleLength = standardCycleLength + adjustment;
+    const predictedDate = new Date(periodStart);
+    predictedDate.setDate(predictedDate.getDate() + predictedCycleLength);
+
+    // Format the date as YYYY-MM-DD and update the display
+    const predictedDateFormatted = predictedDate.toISOString().slice(0, 10);
+    document.getElementById("end-date").textContent = predictedDateFormatted;
+  }
 </script>
 
   <div class="ashank">
